@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/icon.png
+    " />
+  
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created Aicapella"
+    />
+    <title>Aicapella</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+<div class="content">
+  <img src="{{ url_for('static', filename='icon.png') }}" alt="Image" width="400" height="350">
+  <form action="/" method="POST" enctype="multipart/form-data">
+
+    <input type="file" accept=".wav" onChange="handleFileChange(event)" ref="fileInputRef" name="file">
+    
+    <!-- <button type="button" onclick="openFileInput()">Select File</button> -->
+    <input type="submit" value="Upload">
+  </form>
+  {% if processed_file %}
+  <form method="get" action="{{ url_for('download_file') }}">
+      <button type="submit">Download Processed File</button>
+  </form>
+
+  <h2>Music Player</h2>
+  <audio controls>
+      <source src="{{ url_for('static', filename='outputs/output_song.wav') }}" type="audio/wav">
+      Your browser does not support the audio tag.
+  </audio>
+  {% endif %}
+<script>
+function openFileInput() {
+  document.querySelector('[ref="fileInputRef"]').click();
+}
+
+function handleFileChange(event) {
+  const file = event.target.files[0];
+  if (file && file.type === 'audio/wav') {
+    // Handle the selected file as needed
+    console.log('Selected file:', file);
+  } else {
+    console.log('Please select a .wav file.');
+  }
+}
+</script>
+
+</div>
+</body>
+</html>
