@@ -21,16 +21,18 @@
 
 <div class="content">
   <img src="{{ url_for('static', filename='icon.png') }}" alt="Image" width="400" height="350">
-  <form action="/" method="POST" enctype="multipart/form-data">
+  <div >
+    <form action="/" class = "main-form" method="POST" enctype="multipart/form-data">
 
-    <input type="file" accept=".wav" onChange="handleFileChange(event)" ref="fileInputRef" name="file">
-    
-    <!-- <button type="button" onclick="openFileInput()">Select File</button> -->
-    <input type="submit" value="Upload">
-  </form>
+      <input type="file" accept=".wav" onChange="handleFileChange(event)" ref="fileInputRef" name="file" class="file-chooser">
+      
+      <button class ="choose-btn" type="button" onclick="openFileInput() ">Select File</button> 
+      <input class ="choose-btn" type="submit" value="Extract Vocal">
+    </form>
+</div>
   {% if processed_file %}
   <form method="get" action="{{ url_for('download_file') }}">
-      <button type="submit">Download Processed File</button>
+      <button class = "download-btn" type="submit">Download Processed File</button>
   </form>
 
   <h2>Music Player</h2>

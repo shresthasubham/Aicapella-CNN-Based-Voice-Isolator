@@ -86,7 +86,10 @@ body {
     top:50%;
     transform:translate(-50%, -50%);
   }
-  
+.main-form {
+    display: flex ;
+    justify-content: space-between;
+  }
   h1 {
     font-family:monospace;
   }
@@ -101,9 +104,6 @@ body {
   }
   
 
-
-
-
 form {
     margin: 20px auto;
     text-align: center;
@@ -111,7 +111,7 @@ form {
 
 
 
-.custom-file-upload {
+/* .custom-file-upload {
     border: 1px solid #ccc;
     display: inline-block;
     padding: 6px 12px;
@@ -123,22 +123,10 @@ form {
 
 .custom-file-upload:hover {
     background-color: #df2323;
-}
+} */
 
-button[type="submit"] {
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-.buts{
+
+ .buts{
   border: none;
   background-color: #4CAF50;
   color: white;
@@ -152,6 +140,46 @@ button[type="submit"] {
   border-radius: 4px;
 }
 
-button[type="submit"]:hover {
-    background-color: #45a049;
+
+
+.file-chooser {
+  display: none;
+}
+
+.choose-btn {
+  background-color: rgb(168, 43, 226);
+  border: 2px solid rgb(168, 43, 226);
+  width: 200px;
+  border-radius: 10px;
+  padding: 8px 15px 8px 15px;
+  margin-right: 10px;
+  color: aliceblue;
+  font-size: 20px;
+  transition: background-color, padding 1s;
+
+}
+.choose-btn:hover{
+  cursor: pointer;
+  background-color: white;
+  color: rgb(168, 43, 226);
+ 
+}
+.download-btn {
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+
+
+}
+.download-btn:hover {
+  cursor: pointer;
+  color: #4CAF50;
+  background-color: white
 }
