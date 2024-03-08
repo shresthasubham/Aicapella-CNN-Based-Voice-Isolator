@@ -77,7 +77,7 @@ Execute
 [Documentation](https://github.com/shresthasubham/Aicapella-CNN-Based-Voice-Isolator/tree/master/docs)
 
 ## Drive link
-[Drive]([https://github.com/shresthasubham/Aicapella-CNN-Based-Voice-Isolator/tree/master/docs](https://drive.google.com/drive/folders/19WO-Xl-0wD24SWnnCFSWcR8CzwbCJw0B?usp=sharing))
+[Drive](https://github.com/shresthasubham/Aicapella-CNN-Based-Voice-Isolator/tree/master/docs](https://drive.google.com/drive/folders/19WO-Xl-0wD24SWnnCFSWcR8CzwbCJw0B?usp=sharing)
 
 
 ## References
