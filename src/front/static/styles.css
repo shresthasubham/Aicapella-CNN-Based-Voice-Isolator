@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8a5555;
+}
+
+
+@font-face {
+    font-family: anta;
+    src: url(../public/Anta-Regular.ttf);
+  }
+  
+  
+  
+  
+  
+  html {
+    height:100%;
+    background-image: url("/static/images/wave1.png"),url("/static/images/wave2.png");
+    
+  }
+  
+  body {
+    margin:0;
+   
+    
+  }
+  body::before,
+  body::after {
+    content: "";
+    position: absolute;
+    bottom: 5%;
+  }
+  
+  body::before {
+    left: 0;
+    width: 30%; /* Adjust as needed */
+    height: 60%; /* Adjust as needed */
+    background-image: url("/static/images/singing1.png"); /* Path to your image */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  body::after {
+    right: 0;
+    width: 32%; /* Adjust as needed */
+    height: 60%; /* Adjust as needed */
+    background-image: url("/static/images/singing2.png"); /* Path to your image */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .bg {
+    animation:slide 8s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity: 0.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+    
+   
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  .content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+  }
+  
+  h1 {
+    font-family:monospace;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+  
+
+
+
+
+form {
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #f5c8c8;
+    color: #333;
+    border-radius: 4px;
+}
+
+.custom-file-upload:hover {
+    background-color: #df2323;
+}
+
+button[type="submit"] {
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.buts{
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
